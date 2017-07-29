@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.3/css/bulma.css">
+  </head>
+  <body>
+    
+    <div id="app" class="container">
+
+      <coupon @applied="onCouponApplied"></coupon>
+      <h3 v-if="couponApplied">couponApplied</h3>
+      
+      <!--<tabs>
+        <tab name="about us" :selected="true">
+          <h4>here is the content for the about</h4>  
+        </tab>
+        <tab name="about culture">
+          <h4>here is the content for the culture</h4>  
+        </tab>
+        <tab name="about vision">
+          <h4>here is the content for the vision</h4>  
+        </tab>   
+      </tabs>  -->
+      <!--<modal v-if="showModal" @close="showModal = false">
+        <p>we insert any text here</p>
+      </modal>
+      <button class="button is-warning" @click="showModal = true">show modal</button>-->
+
+      <!--<message 
+        title="Vertical..." 
+        subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque">
+      </message>
+      <message 
+        title="Vertical...2" 
+        subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque">
+      </message> -->
+      
+    </div>
+
+    <script src="https://unpkg.com/vue"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <style>
+      .is-loading {background-color: red;}
+    </style>
+  </head>
+  <body>
+    
+    <div id="app">
+      <h3>all tasks</h3>
+      <ul>
+        <li v-for="task in tasks" v-text="task.description"></li>
+      </ul>
+
+      <h3>incompleted tasks</h3>
+      <ul>
+        <li v-for="task in incompletedTasks"  v-text="task.description"></li>
+      </ul>
+
+    </div>
+
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+     var app = new Vue({
+        el: '#app',
+        data: {
+          tasks: [
+            { description: 'Go to the store', completed: true },
+            { description: 'finish screencast', completed: false },
+            { description: 'Make donation', completed: false },
+            { description: 'clean imbox', completed: false },
+            { description: 'make dinner', completed: false },
+            { description: 'clean the room', completed: true }
+
+          ]
+        },
+        computed: {
+          incompletedTasks(){
+            return this.tasks.filter(task => !task.completed);
+          }
+        }
+        
+      });
+       
+
+    </script>
+  </body>
+</html>

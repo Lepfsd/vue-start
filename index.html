@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.3/css/bulma.css">
+  </head>
+  <body>
+    
+    <div id="root" class="container">
+      
+        <progress-view inline-template>
+          <div>
+            <h1>your progress through the course is {{ completionRate }}</h1>
+            <p><button class="button is-info" @click="completionRate += 10">update</button></p>
+          </div>
+        </progress-view>
+      
+      
+      <!--<modal>
+        <template slot="header">
+          my title
+        </template>
+        here is my main content 
+        <template slot="footer">
+          <a class="button is-success">Save changes</a>
+          <a class="button">Cancel</a>
+        </template>
+      </modal> -->
+      
+    </div>
+
+    <script src="https://unpkg.com/vue"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
